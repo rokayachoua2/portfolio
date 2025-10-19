@@ -630,3 +630,65 @@ span {
 .project-info ul li {
     margin-bottom: 1rem;
 }
+.contact-section {
+            min-height: 100vh;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5rem 9%;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background-color: #161616;
+            border: 2px solid #B76A25;
+            border-radius: 2rem;
+            padding: 3rem;
+            box-shadow: 0 0 25px rgba(183, 106, 37, 0.2);
+        }
+
+        .contact-info p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .contact-info p a {
+            color: #B76A25;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .contact-info p a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background-color: transparent;
+            border: 0.2rem solid #B76A25;
+            font-size: 2rem;
+            border-radius: 50%;
+            margin: 0 1rem;
+            transition: 0.3s ease;
+            color: #B76A25;
+        }
+
+        .social-icons a:hover {
+            color: black;
+            transform: scale(1.3) translateY(-5px);
+            background-color: #B76A25;
+            box-shadow: 0 0 25px #B76A25;
+        }
