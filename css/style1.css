@@ -703,3 +703,37 @@ span {
         background-color: #161616;
     }
 }
+/* زر القائمة + nav على الهاتف */
+@media(max-width: 995px) {
+    nav {
+        display: none; /* مخفي افتراضياً */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        background-color: #161616;
+        border-left: 2px solid #B76A25;
+        border-bottom: 2px solid #B76A25;
+        border-bottom-left-radius: 2rem;
+        padding: 2rem;
+    }
+
+    nav.active {
+        display: block; /* يظهر ملي تضغطي على الزر */
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 2.5rem;
+        color: #B76A25;
+        cursor: pointer;
+    }
+}
+
+/* على الكمبيوتر الزر مخفي */
+@media(min-width: 996px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
