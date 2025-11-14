@@ -221,27 +221,17 @@ span {
 }
 
 @keyframes words {
-    0%,
-    20% {
+    0%, 33% {
         content: "Web Developer";
     }
-    21%,
-    40% {
+    34%, 66% {
         content: "Developer";
     }
-    41%,
-    60% {
+    67%, 100% {
         content: "Web Designer";
     }
-    61%,
-    80% {
-        content: "web  Marketing";
-    }
-    81%,
-    100% {
-        content: "Script Writer";
-    }
 }
+
 
 @media (max-width: 1000px) {
     .home {
