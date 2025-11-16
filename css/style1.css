@@ -28,13 +28,14 @@ header {
     left: 0;
     width: 100%;
     padding: 1rem 9%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
-    background-color: rgba(0, 0, 0, 0.8); 
 }
+
 
 .logo {
     font-size: 3rem;
