@@ -14,20 +14,18 @@ html{font-size:62.5%;}
 
 body{
   width:100%;
-  min-height:100vh;          /* بدل height:100vh */
+  min-height:100vh;          
   overflow-x:hidden;
   background:#000;
   color:#fff;
 
-  /* ✅ باش المحتوى مايدخلش تحت header fixed */
-  padding-top: 90px;         /* زيدي/نقصي حسب ارتفاع الهيدر */
+  padding-top: 90px;         
 }
 
-/* ✅ باش التنقل ل #section مايبقاش كيدخل تحت الهيدر */
 section{
   min-height:100vh;
   padding:5rem 9% 5rem;
-  scroll-margin-top: 110px;  /* نفس تقريباً height ديال header */
+  scroll-margin-top: 110px;  
 }
 
 /* ================= Header / Nav ================= */
@@ -43,7 +41,6 @@ header{
   align-items:center;
   z-index:100;
 
-  /* ✅ حيدنا margin-top اللي كيدير التشويه */
   margin-top:0;
 }
 
@@ -68,7 +65,7 @@ nav a{
 nav a:hover,
 nav a.active{
   color:#B76A25;
-  border-bottom:3px solid #B76A25; /* ✅ نفس اللون ديال theme */
+  border-bottom:3px solid #B76A25; 
 }
 
 /* زر المينيو */
@@ -191,7 +188,7 @@ span{color:#B76A25;}
   width:calc(100% + 8px);
   height:100%;
   border-left:3px solid #000;
-  right:-8px;               /* ✅ كانت ناقصة px */
+  right:-8px;               
   animation:cursor 0.6s infinite;
 }
 
@@ -401,7 +398,6 @@ span{color:#B76A25;}
 @media (max-width:995px){
   .menu-btn{display:block;}
 
-  /* ✅ خلي nav يبان مباشرة تحت header */
   nav{
     display:none;
     position:absolute;
@@ -432,7 +428,7 @@ span{color:#B76A25;}
 
   .home{
     flex-direction:column;
-    margin:2rem 4rem; /* ✅ نقصنا شوية باش مايزيدش الفراغ */
+    margin:2rem 4rem; 
   }
 
   .home .home-content h3{font-size:2.5rem;}
