@@ -14,15 +14,24 @@ html{font-size:62.5%;}
 
 body{
   width:100%;
-  height:100vh;
+  min-height:100vh;          /* بدل height:100vh */
   overflow-x:hidden;
   background:#000;
   color:#fff;
+
+  /* ✅ باش المحتوى مايدخلش تحت header fixed */
+  padding-top: 90px;         /* زيدي/نقصي حسب ارتفاع الهيدر */
+}
+
+/* ✅ باش التنقل ل #section مايبقاش كيدخل تحت الهيدر */
+section{
+  min-height:100vh;
+  padding:5rem 9% 5rem;
+  scroll-margin-top: 110px;  /* نفس تقريباً height ديال header */
 }
 
 /* ================= Header / Nav ================= */
 header{
-  margin-top:20px;
   position:fixed;
   top:0;
   left:0;
@@ -33,6 +42,9 @@ header{
   justify-content:space-between;
   align-items:center;
   z-index:100;
+
+  /* ✅ حيدنا margin-top اللي كيدير التشويه */
+  margin-top:0;
 }
 
 .logo{
@@ -56,7 +68,7 @@ nav a{
 nav a:hover,
 nav a.active{
   color:#B76A25;
-  border-bottom:3px solid #b74b4b;
+  border-bottom:3px solid #B76A25; /* ✅ نفس اللون ديال theme */
 }
 
 /* زر المينيو */
@@ -67,12 +79,7 @@ nav a.active{
   cursor:pointer;
 }
 
-/* ================= Sections (base) ================= */
-section{
-  min-height:100vh;
-  padding:5rem 9% 5rem;
-}
-
+/* ================= Titles ================= */
 .section-title{
   font-size:4rem;
   font-weight:700;
@@ -110,15 +117,13 @@ span{color:#B76A25;}
   position:relative;
   width:32vw;
   border-radius:50%;
-  box-shadow:0 0 25px solid #B76A25;
+  box-shadow:0 0 25px rgba(183,106,37,0.6);
   cursor:pointer;
   transition:0.2s linear;
 }
 
 /* ================= Social Icons ================= */
-.social-icons{
-  margin-top:2rem;
-}
+.social-icons{margin-top:2rem;}
 
 .social-icons a{
   display:inline-flex;
@@ -158,7 +163,7 @@ span{color:#B76A25;}
 }
 
 .btn:hover{
-  transform:scale3d(1.03);
+  transform:scale3d(1.03,1.03,1.03);
   background:#B76A25;
   color:#000;
   box-shadow:0 0 25px #B76A25;
@@ -186,7 +191,7 @@ span{color:#B76A25;}
   width:calc(100% + 8px);
   height:100%;
   border-left:3px solid #000;
-  right:-8;
+  right:-8px;               /* ✅ كانت ناقصة px */
   animation:cursor 0.6s infinite;
 }
 
@@ -199,7 +204,7 @@ span{color:#B76A25;}
   67%,100%{content:"Web Designer";}
 }
 
-/* ================= Grid Containers ================= */
+/* ================= Grids ================= */
 .skills-container,
 .services-container{
   display:grid;
@@ -230,7 +235,7 @@ span{color:#B76A25;}
   text-align:center;
 }
 
-/* ================= Boxes (unified) ================= */
+/* ================= Boxes ================= */
 .skill-box,
 .service-box,
 .edu-box,
@@ -253,15 +258,11 @@ span{color:#B76A25;}
 }
 
 .skill-box,
-.service-box{
-  padding:2rem;
-}
+.service-box{padding:2rem;}
 
 .edu-box,
 .exp-box,
-.project-box{
-  padding:2.5rem;
-}
+.project-box{padding:2.5rem;}
 
 .skill-box i,
 .service-box i,
@@ -314,14 +315,13 @@ span{color:#B76A25;}
   line-height:1.6;
 }
 
-/* btn داخل project-box (نفس الستايل، غير حجم أصغر) */
 .project-box .btn{
   font-size:1.4rem;
   padding:1rem 2rem;
   text-transform:uppercase;
 }
 
-/* ================= Contact Info Box ================= */
+/* ================= Contact Info ================= */
 .contact-info{
   max-width:600px;
   margin:3rem auto 0;
@@ -343,7 +343,6 @@ span{color:#B76A25;}
 
 .contact-info p a{
   color:#B76A25;
-  text-decoration:none;
   transition:0.3s ease;
 }
 .contact-info p a:hover{color:#fff;}
@@ -392,7 +391,6 @@ span{color:#B76A25;}
   list-style:none;
   padding-left:0;
 }
-
 .project-info ul li{margin-bottom:1rem;}
 
 /* ================= Responsive ================= */
@@ -403,12 +401,13 @@ span{color:#B76A25;}
 @media (max-width:995px){
   .menu-btn{display:block;}
 
+  /* ✅ خلي nav يبان مباشرة تحت header */
   nav{
     display:none;
     position:absolute;
-    top:60px;
+    top:100%;
     right:0;
-    width:50%;
+    width:60%;
     background:#161616;
     border-left:2px solid #B76A25;
     border-bottom:2px solid #B76A25;
@@ -421,7 +420,7 @@ span{color:#B76A25;}
   nav a{
     display:block;
     font-size:2rem;
-    margin:3rem 0;
+    margin:2rem 0;
   }
 
   nav a:hover,
@@ -433,7 +432,7 @@ span{color:#B76A25;}
 
   .home{
     flex-direction:column;
-    margin:5rem 4rem;
+    margin:2rem 4rem; /* ✅ نقصنا شوية باش مايزيدش الفراغ */
   }
 
   .home .home-content h3{font-size:2.5rem;}
